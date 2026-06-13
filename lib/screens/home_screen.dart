@@ -12,6 +12,7 @@ import 'package:shadows_on_the_quarry_wall/providers/input_provider.dart';
 import 'package:shadows_on_the_quarry_wall/providers/project_provider.dart';
 import 'package:shadows_on_the_quarry_wall/providers/search_provider.dart';
 import 'package:shadows_on_the_quarry_wall/utils/const.dart';
+import 'package:shadows_on_the_quarry_wall/utils/layout.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -70,7 +71,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             SliverFillRemaining(hasScrollBody: false, child: _buildEmptyState())
           else
             SliverPadding(
-              padding: EdgeInsets.fromLTRB(16.w, 4.h, 16.w, 140.h),
+              padding: EdgeInsets.fromLTRB(16.w, 4.h, 16.w, homeScrollBottomInset),
               sliver: SliverMasonryGrid.count(
                 crossAxisCount: 2,
                 mainAxisSpacing: 12.h,
@@ -91,7 +92,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         ],
       ),
       floatingActionButton: _buildRecordFab(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButtonLocation: const BottomNavEndFloatFabLocation(),
     );
   }
 
@@ -304,24 +305,21 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   Widget _buildRecordFab() {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 88.h, right: 4.w),
-      child: FloatingActionButton.extended(
-        onPressed: () {
-          ref.read(inputProvider).clearAll();
-          ref.read(imageProvider).clearImage();
-          Navigator.pushNamed(context, '/add_screen');
-        },
-        backgroundColor: kAccent,
-        elevation: 0,
-        icon: Icon(Icons.add, color: Colors.white, size: 20.sp),
-        label: Text(
-          'Record tool',
-          style: GoogleFonts.inter(
-            color: Colors.white,
-            fontWeight: FontWeight.w600,
-            fontSize: 13.sp,
-          ),
+    return FloatingActionButton.extended(
+      onPressed: () {
+        ref.read(inputProvider).clearAll();
+        ref.read(imageProvider).clearImage();
+        Navigator.pushNamed(context, '/add_screen');
+      },
+      backgroundColor: kAccent,
+      elevation: 0,
+      icon: Icon(Icons.add, color: Colors.white, size: 20.sp),
+      label: Text(
+        'Record tool',
+        style: GoogleFonts.inter(
+          color: Colors.white,
+          fontWeight: FontWeight.w600,
+          fontSize: 13.sp,
         ),
       ),
     );

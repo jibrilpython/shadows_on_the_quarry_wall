@@ -17,6 +17,7 @@ import 'package:shadows_on_the_quarry_wall/providers/project_provider.dart';
 import 'package:shadows_on_the_quarry_wall/showcase/rift_reader_palette.dart';
 import 'package:shadows_on_the_quarry_wall/showcase/rift_reader_painter.dart';
 import 'package:shadows_on_the_quarry_wall/showcase/rift_reader_physics.dart';
+import 'package:shadows_on_the_quarry_wall/utils/layout.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -315,7 +316,7 @@ class _ShowcaseScreenState extends ConsumerState<ShowcaseScreen>
   }
 
   /// Floating nav pill in [MainNavigation]: 24.h margin + 66.h height + gap.
-  double get _bottomNavClearance => 24.h + 66.h + 12.h;
+  double get _bottomNavClearance => bottomNavClearance;
 
   /// Hammer / field strip sits above the nav pill.
   double get _actionBarBottom => _bottomNavClearance;
