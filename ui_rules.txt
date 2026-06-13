@@ -1,0 +1,42 @@
+1. DESIGN PHILOSOPHY
+Visual: "Stonecutter's Drawing" — the UI draws from the visual language of architectural stone documentation: the mason's working drawing, the quarry survey, the cathedral lodge book. These are the documents that surrounded the tools being catalogued — ruled on vellum, inked on linen, scored into soft stone as setting-out lines. The design language is correspondingly monumental and structural: strong verticals, precise ruled geometry, and a palette pulled from the stone itself. Think a modern architectural heritage institution's digital catalog, or a premium masonry equipment brand's technical documentation. Heavy, precise, and built to last.
+Mood: monumental, structural, geological, lodge-serious, built-to-last.
+Important: No stone texture backgrounds, no chiseled letterforms used decoratively, no gothic arch motifs as UI ornamentation. The plug-and-feather wedge and the profile gauge were precision instruments of dimensional geometry — the app should feel like the architectural drawing office that specified them, not the quarry face where they were used.
+
+2. COLORS
+#F3F1ED — Main background (limestone white — the specific warm grey-white of dressed limestone, the color of a freshly cut Portland stone face, slightly warmer than observatory white and cooler than wheat parchment)
+#181614 — Primary text & high-contrast elements (quarry black — warm, dense, like charcoal on a mason's setting-out line)
+#FFFFFF — Secondary panels / card surfaces
+#7A7670 — Secondary text / muted labels (ashlar grey — warm neutral, like the shadow in a dressed stone joint)
+#5C4E3A — Primary accent (quarry umber — the deep warm brown of iron-stained quarry water, the color of a well-used steel wedge handle, the patina on a core drill frame. Not brass, not wood — the specific brown of worked stone and steel together. The most geological accent in the series.)
+#E6E2DB — Outline / stroke / dividers (setting-out rule lines, warm limestone)
+#6B7A5E — Secondary accent (lodge green — the institutional grey-green of a quarry surveyor's field notebook cover, the painted steel of a Victorian masonry workshop. For condition badges, provenance tags, and mint-state indicators)
+#C0392B — Critical errors only
+Important: Quarry umber is the most geological primary accent in the series — it should feel like it was mixed from iron oxide and linseed oil, not chosen from a color picker. It is darker and earthier than any other primary accent, referencing the specific materiality of stone and the tools that worked it. Lodge green is the institutional counterbalance — the surveyor's green, not a natural green. The limestone background sits exactly between the warmth of wheat parchment and the cool of signal box white — a geological middle tone.
+
+3. TYPOGRAPHY
+Display / Headings: Cormorant Garamond (weight 600) — the most architecturally appropriate serif in the series. It has the proportions of Renaissance stonecutting manuals, the elegance of an architectural pattern book, and the authority of a cathedral lodge record. At large sizes it references the engraved lettering on stone monuments themselves — cut letterforms made typographic. Used for tool names on detail views and the app title.
+Body / Descriptions: Inter (weight 300–400) — neutral and precise. For condition notes, quarry history, dimensional specifications, and all prose fields.
+Monospace / Identifiers: IBM Plex Mono — for archive codes like SQW-PLUG-FEATHER-1878-GBR-PORTLAND-QUARRY-009, drill diameter specs (38 mm / 1.5 in), wedge set counts (3-piece, 300 mm), and all structured technical fields.
+Important: Cormorant Garamond at 24px and above only — below that its delicacy becomes fragility. Inter handles all reading-size text. IBM Plex Mono for every measurement, dimension, and archive code — stone specifications were cut to tolerance, and the typography should feel equally exact.
+
+4. SURFACE & TEXTURE LANGUAGE
+
+Backgrounds: flat limestone white — no stone grain, no texture, no noise
+Cards: pure white with a 1px border at #E6E2DB and 10px corner radius — architectural record cards, warm and structured
+Wedge profile motif: each list card features a small SVG — a minimal side-elevation silhouette of the tool type: a plug-and-feather set shown as a tapered wedge between two flat feather plates, a core drill shown as a hollow cylinder cross-section, a profile gauge shown as an irregular stepped outline referencing a gothic molding, a leveling arc shown as a quarter-circle with tick marks. Rendered in quarry umber for complete and operational instruments, lodge green for display condition. The elevation silhouette references architectural drawing conventions — the tool drawn as if it were a building component in a working drawing.
+Dimension badge: each card shows the key dimensional specification in IBM Plex Mono — 38 mm bore, 300 mm wedge, 1:8 taper — in a small warm-bordered pill. The defining engineering specification for any stone-splitting or boring tool.
+Photography: tool photography on warm white — the cutting edge, wedge taper, or profile outline forward. For plug-and-feather sets, show the complete set arranged in order. For profile gauges, show the stepped edge against a light background. No props.
+Quarry provenance tag: small pill showing the originating quarry or building project — Portland Stone, Carrara Marble, Aberdeen Granite, Indiana Limestone — in quarry umber at 12% opacity fill with full umber text
+
+
+5. INTERACTION PRINCIPLES
+
+Transitions: 220–260ms ease-out — deliberate and structural, like a stone block finding its bed
+Selected state: quarry umber left-border (3px) + faint #F5F0E8 background tint on active cards
+Empty states: NO TOOLS IN THIS QUARRY YET. in IBM Plex Mono, centered, ashlar grey — one line
+Loading: a thin quarry umber progress bar at screen top — steady and unhurried
+Navigation: bottom tab bar — four tabs: Quarry, Stone Map, Logbook, Settings. Active tab in quarry umber.
+Stone type filter: a first-class filter chip row — Granite, Limestone, Marble, Sandstone, Slate, Basalt — because the stone type a tool was designed to work determines its geometry, its steel hardness specification, and its historical context, and is the primary axis a masonry historian uses to classify any splitting or boring instrument
+
+Important: The elevation silhouette SVG on each card is the most architecturally disciplined motif in the series — drawn in the convention of a working drawing, not an illustration. A plug-and-feather set in side elevation looks nothing like a core drill in cross-section, and nothing like a profile gauge in outline. The silhouette IS the taxonomy. Umber means operational and complete. Lodge green means display condition or missing components. A collector should read tool type and condition simultaneously from the silhouette before reading a single word of text.
