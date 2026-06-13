@@ -243,7 +243,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 hintStyle: GoogleFonts.inter(color: kSecondaryText, fontSize: 13.sp),
                 border: InputBorder.none,
                 isDense: true,
-                contentPadding: EdgeInsets.symmetric(vertical: 10.h),
+                contentPadding: EdgeInsets.fromLTRB(6.w, 10.h, 0, 10.h),
               ),
             ),
           ),
